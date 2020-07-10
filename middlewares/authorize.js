@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken')
 const { secret } = require('../config/config')
 const { CustomError } = require('../helpers/error-handler')
 
-function authorize (roles = []) {
+const authorize = (roles = []) => {
   if (typeof roles === 'string') {
     roles = [roles]
   }

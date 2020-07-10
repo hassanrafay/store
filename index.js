@@ -27,7 +27,7 @@ app.use('/', routes)
 // Error handler
 app.use((err, req, res, next) => errorHandler(err, req, res, next))
 
-process.on('SIGINT', function () {
+process.on('SIGINT', () => {
   process.exit(1)
 })
 
